@@ -9,10 +9,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author == client.user:
+    if message.author == client.user: # we do not want the bot to reply to itself
         return
 
-    if message.content.startswith('$hello'):
+    if message.content.startswith('!hello'):
         await message.channel.send('Hello!')
 
 client.run('XXXXXXXXXXXXXXXXXXXXXX') #Paste your Token here
